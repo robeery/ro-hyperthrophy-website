@@ -4,21 +4,45 @@
         <nume>Vezeteu</nume>
         <prenume>Alexandru</prenume>
         <varsta>21</varsta>
+        <adresa>
+            <strada>Garii</strada>
+            <numar>128</numar>
+            <localitate>Iasi</localitate>
+            <judet>Iasi</judet>
+            <tara>Romania</tara>
+        </adresa>
+        <hobby>Factorio</hobby>
     </persoana>
 
     <persoana id="2">
         <nume>Dandu</nume>
         <prenume>Claudiu</prenume>
         <varsta>20</varsta>
+        <adresa>
+            <strada>Vlad Tepes</strada>
+            <numar>15</numar>
+            <localitate>Coarnele Caprei</localitate>
+            <judet>Iasi</judet>
+            <tara>Romania</tara>
+        </adresa>
+        <hobby>Agricultura</hobby>
     </persoana>
 
     <persoana id="3">
         <nume>Cascaval</nume>
         <prenume>Marian</prenume>
         <varsta>29</varsta>
+        <adresa>
+            <strada>Principala</strada>
+            <numar>20</numar>
+            <localitate>Raducaneni</localitate>
+            <judet>Iasi</judet>
+            <tara>Romania</tara>
+        </adresa>
+        <hobby>Design</hobby>
     </persoana>
 
-    <persoana id="3">
+    <persoana id="4">
         <nume> Ionescu </nume>
         <prenume>Ion</prenume>
         <varsta>31</varsta>
@@ -29,6 +53,7 @@
             <judet>Iasi</judet>
             <tara>Romania</tara>
         </adresa>
+        <hobby>Masini</hobby>
 
     </persoana>
 
