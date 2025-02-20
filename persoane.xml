@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persoane>
+    <persoana id="1">
+        <nume>Vezeteu</nume>
+        <prenume>Alexandru</prenume>
+        <varsta>21</varsta>
+    </persoana>
+
+    <persoana id="2">
+        <nume>Dandu</nume>
+        <prenume>Claudiu</prenume>
+        <varsta>20</varsta>
+    </persoana>
+
+    <persoana id="3">
+        <nume>Cascaval</nume>
+        <prenume>Marian</prenume>
+        <varsta>29</varsta>
+    </persoana>
+
+</persoane>
