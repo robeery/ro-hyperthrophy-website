@@ -1,3 +1,4 @@
+//tema 1
 var span = document.getElementById('x');
 
 function ora()
@@ -73,5 +74,114 @@ if (navigator.geolocation) {
     document.getElementById("location").innerHTML = 
         "Locația nu este disponibilă :(";
 }
-setInterval(getLocation, 10);
 
+
+
+//functie canvas tema2
+//mai bine lucram la sd..
+document.addEventListener('DOMContentLoaded', function() {
+    const canvas = document.getElementById('drawingCanvas');
+    if (!canvas) return; 
+    
+    const ctx = canvas.getContext('2d');
+    const strokeColorPicker = document.getElementById('strokeColor');
+    const fillColorPicker = document.getElementById('fillColor');
+    
+    const shapeTypeSlider = document.getElementById('shapeType');
+    const radiusSlider = document.getElementById('radiusSlider');
+    const radiusValue = document.getElementById('radiusValue');
+    const weightInfo = document.getElementById('weightInfo');
+
+    let startX, startY;
+    let clickCount = 0;
+    
+   
+    
+    // actualizare raza la slider numeric
+    radiusSlider.addEventListener('input', function() {
+        radiusValue.textContent = this.value;
+    });
+    
+    function drawText() {
+        
+        ctx.font = '40px Arial';
+        ctx.fillStyle = '#003B6D';
+        ctx.fillText('Hipertrofie online - Joacă-te!', 150, 50);
+
+    }
+    
+    
+    function drawRectangle(x1, y1, x2, y2) {
+        const width = x2 - x1;
+        const height = y2 - y1;
+        
+        ctx.strokeStyle = strokeColorPicker.value;
+        ctx.fillStyle = fillColorPicker.value;
+        
+        ctx.beginPath();
+        ctx.rect(x1, y1, width, height);
+        ctx.fill();
+        ctx.stroke();
+    }
+    
+    function drawWeightDisc(x, y) {
+        const radius = parseInt(radiusSlider.value);
+        const innerHoleRadius = radius / 5; // gaura din centru
+        
+        ctx.strokeStyle = strokeColorPicker.value;
+        ctx.fillStyle = fillColorPicker.value;
+        ctx.lineWidth = 2;
+        
+        // desen disc principal
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.stroke();
+        
+        // desen gaura mijloc
+        ctx.beginPath();
+        ctx.arc(x, y, innerHoleRadius, 0, 2 * Math.PI);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        ctx.stroke();
+        
+        // text disc greutate
+        const weight = Math.round(radius / 2); // 
+        ctx.font = radius / 3 + 'px Arial';
+        ctx.fillStyle = 'white';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(weight + ' kg', x, y + radius * 0.6);
+        
+       
+        
+        
+    }
+    
+    
+    canvas.addEventListener('mousedown', function(e) {
+        const rect = canvas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        if(shapeTypeSlider.value == 0)
+        { //dreptunghi
+            if (clickCount === 0) {
+            
+                startX = x;
+                startY = y;
+                clickCount = 1;
+            } else {
+            
+                drawRectangle(startX, startY, x, y);
+                clickCount = 0;
+            }
+        }
+        else { //disc
+            drawWeightDisc(x, y);
+        }  
+    });
+    
+    
+    drawText();
+});

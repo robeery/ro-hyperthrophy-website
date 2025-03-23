@@ -48,15 +48,7 @@
                 <aside>
                     <a href="#date_invat">Date</a>
                     <a href="#deseneaza_invat"> Desenează</a>
-                    <p></p>
-                
-                    <p> </p>
-                    <p>  1</p>
-                    <p>  1</p>
-                    <p>  1</p>
-                    <p>  1</p>
-                    <p>  1</p>
-                    <p>  1</p>
+                    <a href="#tabel_invat"> Tabel</a>
                         
                 </aside>
             </div>
@@ -71,15 +63,52 @@
                     <p id="url">d3 </p>
                     <p id="browser">d4 </p>
                     <p id="location">Loading... </p>
-
+                </br>
                 </section>
 
                 <section id="deseneaza_invat">
+                    <div class="drawing-container">
                     <h1>Desenează!</h1>
+                    <p>Faceți clic în unul sau două puncte pentru a desena!</p>
+                    <div class="controls">
+                        
+                            <label for="strokeColor">Culoare contur:</label>
+                            <input type="color" id="strokeColor" value="#000000">
+                        
+                        
+                        
+                            <label for="fillColor">Culoare umplere:</label>
+                            <input type="color" id="fillColor" value="#ffffff">
+                        
+
+                        
+                            <label for="shapeType">Formă:</label>
+                            
+                                <span>Dreptunghi</span>
+                                <input type="range" class="slider" id="shapeType" min="0" max="1" step="1" value="0">
+                                <span>Disc greutate</span>
+                            
+                        
+
+                        <div id="weightInfo" >
+                            <label>Rază: <span id="radiusValue">50</span> cm</label>
+                            <input type="range" class="slider" id="radiusSlider"  min="10" max="100" value="50">
+                        </div>
+
+
+                    </div>
+                    </br>
+                    <canvas id="drawingCanvas" width="800" height="500"> </canvas>
+                    </div>
 
                 </section>
 
-                
+                <section id="tabel_invat">
+                    <h1> Tabel</h1>
+                </section>
+            </div>
+
+              
                 
                 
             </div>
