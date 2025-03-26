@@ -1,5 +1,5 @@
 
-* {
+*:not(.buton_desen) {
     box-sizing: border-box;
   }
 .site{
@@ -20,6 +20,33 @@ body{
     display: flex;
     flex-direction: column;
 }
+button {
+    background-color: #003B6D; 
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: 1px solid #EBEDF3;
+    
+  }
+
+button:hover {
+    background-color: #6699CC; 
+}
+.div_button_desen{
+    align-items: center;
+  
+}
+.buton_desen {
+    width: 126px;
+    position: relative;
+    bottom: 110px;
+    
+}
+
 header>h1{
    
     display: flex;
@@ -262,12 +289,12 @@ textarea:focus {
 
 .haltera{
     
-    animation: scaleDownUp 1.7s infinite;
+    animation: scaleDownUp 2s infinite;
     transform-origin: center;
 }
 @keyframes scaleDownUp {
     0% {
-      transform: translateY(0) scale(1); 
+      transform: translateY(0) scale(0.9); 
       
     }
     50% {
@@ -275,7 +302,7 @@ textarea:focus {
       
     }
     100% {
-      transform: translate(0) scale(1); 
+      transform: translate(0) scale(0.9); 
       
     }
 }
@@ -317,9 +344,51 @@ canvas {
     accent-color: blue;
 }
 
+/* animatie buton */
+#popup-container_ronnie {
+    position: fixed;
+    bottom: -600px; /* Start off-screen below the viewport */
+    left: 80%;
+    transform: translateX(-50%);
+    transition: bottom 0.5s ease-out;
+    z-index: 100;
+  }
 
+#popup-container_tom {
+    position: fixed;
+    bottom: -600px; /* Start off-screen below the viewport */
+    left: 20%;
+    transform: translateX(-50%);
+    transition: bottom 0.5s ease-out;
+    z-index: 100;
+}
 
-
+#popup-container_goggins {
+    position: fixed;
+    bottom: -600px; /* Start off-screen below the viewport */
+    left: 52%;
+    transform: translateX(-50%);
+    transition: bottom 0.5s ease-out;
+    z-index: 100;
+}
+#goggins{
+    width: 400px;
+    height: 400px;
+    
+}
+#ronnie {
+    max-width: 300px; /* Adjust size as needed */
+  
+ 
+}
+#tom {
+    max-width: 300px;
+    max-height: 400px;
+    
+}
+.show-popup {
+    bottom: -10px !important; /* Position when visible */
+  }
 
 
 /*
