@@ -390,7 +390,54 @@ canvas {
     bottom: -10px !important; /* Position when visible */
   }
 
+.dynamicTable {
+    width: 400px;
+    height: 300px;
+}
+.dynamicTable, th, tr{
+    border: 2px black;
+    /* border-collapse: collapse; */
+    border-style: solid;
+    border-color: black;
+    align-items: center;
+    margin-left:auto;
+    margin-right:auto;
+}
 
+.dynamicTable tr:first-child {
+    background-color: rgb(23, 32, 56);
+    color: white;
+}
+
+.dynamicTable th:first-child {
+    background-color: #003B6D;
+    color: white;
+}
+.dynamicTable tr:first-child>th:first-child{
+    background-color: rgb(23, 32, 56);
+    color: white;
+}
+.dynamicTable tr:not(:first-child)
+{
+    background-color: rgb(231, 226, 226);
+}
+.invat_headers{
+    background-color: #054285;  /* Albastru principal */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 5px solid #0056b3;  /* Border stânga puțin mai închis */
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+#primul_h1
+{
+    position: relative;
+    bottom: 16px;
+}
 /*
 .site {
     min-height: 100dvh;

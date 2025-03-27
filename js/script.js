@@ -185,3 +185,89 @@ document.addEventListener('DOMContentLoaded', function() {
     
     drawText();
 });
+
+//lab 5 tema3
+function insertRow() {
+    const table = document.getElementById('dynamicTable');
+    const position = parseInt(document.getElementById('position').value);
+    const color = document.getElementById('colorPicker').value;
+    
+    
+    if (isNaN(position) || position < 0 || position > table.rows.length) {
+        alert('Poziție invalidă pentru inserarea liniei!');
+        return;
+    }
+
+    
+    const newRow = table.insertRow(position);
+    
+
+    for (let i = 0; i < table.rows[0].cells.length; i++) {
+        const newCell = newRow.insertCell(i);
+        newCell.textContent = 'Exercițiu nou?';
+        newCell.style.backgroundColor = color;
+        
+        
+        newCell.ondblclick = makeEditable;
+    }
+}
+
+function insertColumn() {
+    const table = document.getElementById('dynamicTable');
+    const position = parseInt(document.getElementById('position').value);
+    const color = document.getElementById('colorPicker').value;
+    
+
+    if (isNaN(position) || position < 0 || position > table.rows[0].cells.length) {
+        alert('Poziție invalidă pentru inserarea coloanei!');
+        return;
+    }
+
+    
+    for (let i = 0; i < table.rows.length; i++) {
+        const newCell = table.rows[i].insertCell(position);
+        newCell.textContent = 'Parametru nou?';
+        newCell.style.backgroundColor = color;
+        
+        
+        newCell.ondblclick = makeEditable;
+    }
+}
+
+function makeEditable(event) {
+    const cell = event.target;
+    
+    
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.value = cell.textContent;
+    input.style.width = '100%';
+    input.style.boxSizing = 'border-box';
+    
+    
+    cell.innerHTML = '';
+    cell.appendChild(input);
+    input.focus();
+    
+    
+    input.addEventListener('blur', function() {
+        cell.textContent = input.value;
+    });
+    
+    
+    input.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            cell.textContent = input.value;
+        }
+    });
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const table = document.getElementById('dynamicTable');
+    
+    
+    table.querySelectorAll('td').forEach(cell => {
+        cell.ondblclick = makeEditable;
+    });
+});

@@ -57,7 +57,7 @@
                 <!--momentan asa, schimb dupa-->
                 
                 <section id="date_invat">
-                    <h1 >Datele tale</h1>
+                    <h1 class="invat_headers" id="primul_h1">Datele tale</h1>
                     <p id="x" onload="ora()">d1</p>
                     <p id="data">d2</p>
                     <p id="url">d3 </p>
@@ -68,7 +68,7 @@
 
                 <section id="deseneaza_invat">
                     <div class="drawing-container">
-                    <h1>Desenează!</h1>
+                    <h1 class="invat_headers" >Desenează!</h1>
                     <p>Faceți clic în unul sau două puncte pentru a desena!</p>
                     <div class="controls">
                         
@@ -104,8 +104,54 @@
                 </section>
 
                 <section id="tabel_invat">
-                    <h1> Tabel</h1>
+                    <h1 class="invat_headers"> Organizează-ți o zi la sală!</h1>
+
+                    
+                        <label for="position">Poziție (indexată de la 0):</label>
+                        <input type="number" id="position" min="0">
+                        
+                        <label for="colorPicker">Culoare fundal:</label>
+                        <input type="color" id="colorPicker">
+
+                    </br>
+                </br>
+                        
+                        <button onclick="insertRow()">Inserează Linie</button>
+                        <button onclick="insertColumn()">Inserează Coloană</button>
+            </br>
+        </br>
+    </br>
+                        <table id="dynamicTable" class="dynamicTable">
+                            
+                                <tr>
+                                    <th>Exercițiu</th>
+                                    <th>Serie</th>
+                                    <th>Repetări</th>
+                                </tr>
+                            
+                            
+                                <tr>
+                                    <td>Genuflexiuni</td>
+                                    <td>3</td>
+                                    <td>12-15</td>
+                                </tr>
+                                <tr>
+                                    <td>Flotări</td>
+                                    <td>4</td>
+                                    <td>10-12</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Abdomene</td>
+                                    <td>4</td>
+                                    <td>10-12</td>
+                                </tr>
+                            
+                        </table>
+
+                    
                 </section>
+            </br> </br> </br> </br>
             </div>
 
               
