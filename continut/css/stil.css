@@ -251,6 +251,43 @@ footer{
     background-color: rgb(231, 226, 226);
 }
 
+.tabel-persoane{
+    width: 80%;
+    
+    border: 2px black;
+    /* border-collapse: collapse; */
+    border-style: solid;
+    border-color: black;
+    align-items: center;
+    margin-left:auto;
+    margin-right:auto;
+    
+
+}
+
+.tabel-persoane td, .tabel-persoane th {
+    padding: 15px; 
+}
+
+.tabel-persoane tr:first-child {
+    background-color: rgb(23, 32, 56);
+    color: white;
+}
+
+.tabel-persoane th:first-child {
+    background-color: #003B6D;
+    color: white;
+}
+.tabel-persoane tr:first-child>th:first-child{
+    background-color: rgb(23, 32, 56);
+    color: white;
+}
+.tabel-persoane tr:not(:first-child)
+{
+    background-color: rgb(231, 226, 226);
+}
+
+
 .form_inregistreaza{
     display:inline-block;
     width: 80%;
