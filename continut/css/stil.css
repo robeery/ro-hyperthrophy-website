@@ -37,6 +37,10 @@ button {
 button:hover {
     background-color: #6699CC; 
 }
+.buton-verificare{
+    position: relative;
+    top: 20px;
+}
 .div_button_desen{
     align-items: center;
   
