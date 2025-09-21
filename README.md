@@ -17,7 +17,7 @@ An interactive fitness website built with HTML5, CSS3, JavaScript, and Python. F
 <p align="center">
   <img src="continut/imagini/gifs/desen_showcase.gif" width="600" alt="Desen Demo">
 </p>
-<p align="center"><i>Bench Press animation with <i> <b> motivation </b></i> button</i></p>
+<p align="center">Bench Press animation with <i> <b> motivation </b></i> button</i></p>
 
 </br> </br>
 
@@ -69,10 +69,12 @@ Afterwards, just run:
 ./lanseaza_server.sh
 ```
 <b> Alternatively </b>, especially if you don't have git installed, you may download the repository as a zip, unarchive it, navigate to the server_web folder and do step 3.
+</br> </br>
+After running the start script, the browser will automatically open the website at `http://localhost:5678`.
 
 ## Troubleshooting
-- If port 5678 is already in use, modify the port in `server_web.py`
-- Ensure Python 3.x is in your system PATH
+- If port 5678 is already in use by another application, modify the port in `server_web.py`
+- Ensure Python 3.x is in your system path
 - To stop the server, press Ctrl + C in the terminal window
 
 
