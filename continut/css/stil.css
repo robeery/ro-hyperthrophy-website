@@ -139,6 +139,7 @@ header > p {
     background-color:  #031952;
     margin: 0;
     border-right: 3px solid black;
+    overflow: hidden;
     
     
 
@@ -158,34 +159,33 @@ header > p {
     flex-direction: row;
     text-align:  center;
     justify-content: space-evenly;
+    gap: 20px;
 }
 
 aside {
     position: fixed;
-    /* top: 240px; */
-    
     justify-content: space-evenly;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    
+    gap: 0;  
+    width: calc(10% - 40px);
+    max-width: 200px;
 }
+
 aside a{
     flex: 1;
     color: whitesmoke;
     text-decoration: none;
     padding: 20px;
     text-align: center;
-    display:block;
-    width: 100%;
-    transition: 0.3s; 
-    
-
+    display: block;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+    background-color: #031952;  
 }
+
 aside a:hover{
     background-color: #6699CC;
-    width:100%;
-    display: block;
 }
 footer{
     margin: 0;
@@ -410,7 +410,7 @@ canvas {
 /* animatie buton */
 #popup-container_ronnie {
     position: fixed;
-    bottom: -600px; /* Start off-screen below the viewport */
+    bottom: -600px; 
     left: 80%;
     transform: translateX(-50%);
     transition: bottom 0.5s ease-out;
@@ -419,7 +419,7 @@ canvas {
 
 #popup-container_tom {
     position: fixed;
-    bottom: -600px; /* Start off-screen below the viewport */
+    bottom: -600px;
     left: 20%;
     transform: translateX(-50%);
     transition: bottom 0.5s ease-out;
@@ -428,7 +428,7 @@ canvas {
 
 #popup-container_goggins {
     position: fixed;
-    bottom: -600px; /* Start off-screen below the viewport */
+    bottom: -600px; 
     left: 52%;
     transform: translateX(-50%);
     transition: bottom 0.5s ease-out;
@@ -499,7 +499,7 @@ canvas {
 #primul_h1
 {
     position: relative;
-    bottom: 16px;
+    bottom: 13px;
 }
 
 .content {
